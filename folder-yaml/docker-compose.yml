@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  service:
+    image: mariadb
+    container_name: service
+    hostname: sqldb
+    environment:
+      MYSQL_DATABASE: "sqldb"
+      MYSQL_ROOT_PASSWORD: "root"
+  httpd:
+    image: alpine.base
+    container_name: httpd
+    ports:
+    - "80:8888"
+
