@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service
+spec:
+  selector:
+    app: sql
+  ports:
+  - protocol: TCP
+    port: 3306
+    targetPort: 3306
