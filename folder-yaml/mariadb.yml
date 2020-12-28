@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sqldb
+  labels:
+    app: sql
+spec:
+  containers:
+    - name: sqldb
+      image: mariadb
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: LANG
+          value: C.UTF-8
+        - name: MYSQL_DATABASE
+          value: sqldb
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+      volumeMounts:
+        - name: mariadb-dir
+          mountPath: /var/lib/mysql
+  volumes:
+    - name: mariadb-dir
+      hostPath:
+        path: /opt/pv/mariadb
+  nodeSelector:
+    kubernetes.io/hostname: lcs52
+  restartPolicy: Always
