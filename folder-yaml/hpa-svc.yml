@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-sp
+spec:
+  selector:
+    app: httpd
+  externalIPs:
+    - 120.96.143.50
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8888
