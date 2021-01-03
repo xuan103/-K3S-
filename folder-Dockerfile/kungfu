@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Content-type: text/html; charset=utf-8"
+parm=$(echo $QUERY_STRING | tr '&' ' ')
+table=$(echo ${parm}|cut -d " " -f1)
+column=$(echo ${parm}|cut -d " " -f2)
+echo ""
+echo $(mysql -uroot -proot -h service "use test; select ${column} from ${table};")
+echo ""
