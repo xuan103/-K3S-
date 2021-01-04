@@ -1,12 +1,9 @@
 ---
 tags: k3s-Enterprise-Application-System
-
-picture: https://docs.google.com/presentation/d/1ozkKTuMUiGRjkFJA8ywXyR60uVFIO38GSHLa_Tud0vQ/edit?usp=sharing
-
-ppt: https://docs.google.com/presentation/d/12C4x0h0EyveVT4NpMaVzkDDvPlRcoU3jXwT7IgFecr0/edit?usp=sharing
 ---
+# [Use K3S to Deploy High Reliability Enterprise Application System](https://docs.google.com/presentation/d/12C4x0h0EyveVT4NpMaVzkDDvPlRcoU3jXwT7IgFecr0/edit?usp=sharing)
 
-# Use K3S to Deploy High Reliability Enterprise Application System
+
 
 ---
 
@@ -62,7 +59,7 @@ ppt: https://docs.google.com/presentation/d/12C4x0h0EyveVT4NpMaVzkDDvPlRcoU3jXwT
 
 <h2 id="Architecture">系統架構圖</h2> 
 
-![](https://i.imgur.com/OlFbCyV.png)
+![](https://i.imgur.com/BIixEtX.png)
 
 - 開啟 admin 電腦以及 3 台 master 電腦, 依據以下操做, 完成安裝.
 
