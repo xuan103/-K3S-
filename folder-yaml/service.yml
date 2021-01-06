@@ -7,5 +7,5 @@ spec:
     app: sql
   ports:
   - protocol: TCP
-    port: 3306
-    targetPort: 3306
+    port: 3306	#開在service上的port號
+    targetPort: 3306  	#資料庫的port號預設是3306
