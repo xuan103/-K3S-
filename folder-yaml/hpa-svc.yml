@@ -9,5 +9,5 @@ spec:
     - 120.96.143.50
   ports:
   - name: http
-    port: 8080
-    targetPort: 8888
+    port: 8080  		#開在120.96.143.50這IP以及service上的port號
+    targetPort: 8888 		#企業網站應用系統的port號
