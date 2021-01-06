@@ -4,9 +4,6 @@
 - alpine.base.ymal
     - 建立兩個相同的應用系統
 
-- dp.yml
-    - demo readiness 自動維護(待刪) 
-
 - hpa-sp.yml
 	- 隨需擴充功能
 
