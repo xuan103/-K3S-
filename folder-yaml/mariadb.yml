@@ -3,26 +3,24 @@ kind: Pod
 metadata:
   name: sqldb
   labels:
-    app: sql
+    app: sql 
 spec:
   containers:
-    - name: sqldb
-      image: mariadb
-      imagePullPolicy: IfNotPresent
-      env:
-        - name: LANG
-          value: C.UTF-8
-        - name: MYSQL_DATABASE
-          value: sqldb
-        - name: MYSQL_ROOT_PASSWORD
-          value: root
-      volumeMounts:
-        - name: mariadb-dir
-          mountPath: /var/lib/mysql
+  - name: sqldb
+    image: mariadb
+    imagePullPolicy: IfNotPresent
+    env:
+      - name: MYSQL_DATABASE 	 #在資料庫裡，創造名為sql的database
+        value: sqldb
+      - name: MYSQL_ROOT_PASSWORD	 #設定 root 的密碼 密碼為root
+        value: root
+    volumeMounts:
+      - name: mariadb-dir
+        mountPath: /var/lib/mysql		  #資料庫存放所以紀錄的資料夾
   volumes:
     - name: mariadb-dir
       hostPath:
-        path: /opt/pv/mariadb
+        path: /opt/pv/mariadb 	 #設定 pv(persistent volume)，讓資料庫裡的資永久保存在本機
   nodeSelector:
-    kubernetes.io/hostname: lcs52
+    kubernetes.io/hostname: lcsxx	  #指定在哪台機器執行，讓資料庫的資料能夠保持同步
   restartPolicy: Always
