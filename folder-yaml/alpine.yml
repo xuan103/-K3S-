@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment  		#提供replicaset功能，管理監控應用系統(pod) r
+metadata:
+  name: httpd
+  labels:
+    app:  httpd  		#Deployment的標籤
+spec:
+  replicas: 2   		#提供自動維護的功能，讓應用系統(pod)可以一直維持我們設定的數量。
+  selector:
+    matchLabels:
+      app: httpd 		#replicaset會搜尋有 httpd 這個標籤的 應用系統(pod) 
+  template:
+    metadata:
+      labels:
+        app: httpd 	#應用系統(pod)的標籤
+    spec:
+      containers:
+      - name: httpd
+        image: dafu/alpine.derby
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 50m      	#設定應用系統(pod)可以使用的運算資源
+        stdin: true
+        tty: true
+        ports:
+        - name: http
+          containerPort: 8888
+#       readinessProbe:  #提供readiness探測功能
+#        exec:
+#           command:
+#           - /bin/bash
+#           - -c
+#           - ls /
+#         initialDelaySeconds: 20 #系統啟動20秒後開始探測
+#         periodSeconds: 5            #每5秒探測一次
