@@ -3,13 +3,13 @@
 ## 目錄
 
 - 建置 K3S
-    - [介紹 - 系統架構圖](#Architecture)
+    - [介紹 - 系統架構圖](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Architecture.md)
     - [Install MariaDB](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/mariadb.md)
 
 
 - 前期部署
     - [製作 & 測試 images](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/images.md)
-    - [部署 images 到 k3s 叢集]()
+    - [部署 images 到 k3s 叢集](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/K3S_Cluster.md)
 
 - 開始企業應用系統
     - []() 
