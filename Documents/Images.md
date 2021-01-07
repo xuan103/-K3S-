@@ -155,7 +155,7 @@ a 1
 > docker save alpine.base > alpine.base.tar
 
 ---
-**[上一頁 - Install MariaDB](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/mariadb.md)**
+**[上一頁 - Install MariaDB](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Mariadb.md)**
 
 **[下一頁 - 部署 images 到 k3s 叢集](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/K3S_Cluster.md)**
 
