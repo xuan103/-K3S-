@@ -27,9 +27,6 @@
 
 - 開啟 admin 電腦以及 3 台 master 電腦, 依據以下操做, 完成安裝.
 
----
-### 一鍵部屬
-> kubectl apply -f .
 
 ---
 **[上一頁 - 目錄](https://github.com/xuan103/k3s-Enterprise-Application-System)**
