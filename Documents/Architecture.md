@@ -5,7 +5,7 @@
 - 建置 K3S
     - [介紹 - 系統架構圖](#Architecture)
 
-----
+---
 
 <h1 id="build-k3s">建置 K3S</h1> 
 <h2 id="present">叢集介紹</h2> 
@@ -26,8 +26,12 @@
 ![](https://i.imgur.com/BIixEtX.png)
 
 - 開啟 admin 電腦以及 3 台 master 電腦, 依據以下操做, 完成安裝.
----
 
+---
+### 一鍵部屬
+> kubectl apply -f .
+
+---
 **[上一頁 - 目錄](https://github.com/xuan103/k3s-Enterprise-Application-System)**
 
-**[下一頁 - Install MariaDB](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/mariadb.md)**
+**[下一頁 - Install MariaDB](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Mariadb.md)**
