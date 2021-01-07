@@ -175,6 +175,8 @@ spec:
   - name: http
     port: 8080  		#開在120.96.143.50這IP以及service上的port號
     targetPort: 8888 		#企業網站應用系統的port號
+
+
 ```
 - ### 讓資料庫能夠對內提供名稱解析
 > nano service.yml
@@ -191,17 +193,35 @@ spec:
     port: 3306	#開在service上的port號
     targetPort: 3306  	#資料庫的port號預設是3306
 ```
+---
+<h2 id="system">部署應用系統</h2>
+### 一鍵部屬
+> kubectl apply -f .
 
+---
+<h2 id="cheak-ym">檢查是否成功啟動</h2>
 
+> kubectl get all
 
+```
+NAME                                     READY            STATUS      RESTARTS      AGE
+pod/ sqldb                                1/1     Running       0         7m29s
+pod/httpd-5fd6d6d694-8rdvx   1/1     Running       0        7m29s
+pod/httpd-5fd6d6d694-fjp8l   1/1     Running       0           7m29s
+ 
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE     SELECTOR
+service/kubernetes   ClusterIP   172.30.0.1     <none>        443/TCP    2d9h    <none>
+service/service      ClusterIP   172.30.0.181   <none>        3306/TCP   6m44s   app=sql
+service/svc-sp       ClusterIP   172.30.0.180   120.96.143.50   8080/TCP   7m29s
+NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/httpd   2/2     2            2           7m29s
 
+NAME                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/httpd-5fd6d6d694   2         2         2       7m29s
 
-
-
-
-
-
-
+NAME                                         REFERENCE          TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/hpa-sp   Deployment/httpd   3%/30%    2         6         2          7m29s
+```
 ---
 **[上一頁 - 製作 & 測試 images](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Images.md)**
 
