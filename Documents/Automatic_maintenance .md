@@ -42,4 +42,4 @@ httpd-6495df464c-zwjpt   1/1     Running   0          26s
 ---
 **[上一頁 - 一鍵部署 - 進退版](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/One_step_deployment.md)**
 
-**[下一頁 - 隨需擴充](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Autoscaling.md**
+**[下一頁 - 隨需擴充](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Autoscaling.md)**
