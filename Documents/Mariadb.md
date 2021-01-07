@@ -14,6 +14,7 @@
 
 *   [查看資料庫](#check-database)
 *   [建置 Pod](#mariadb-pod)
+*   [參考文件](#references)
 ---
 <h1 id="install-mariadb">安裝 mariaDB</h1>
 
@@ -274,3 +275,13 @@ t1     0/1    	  Completed    	         0         	40s
 ```
 pod "t1" deleted
 ```
+
+---
+<h1 id="references">參考文件</h1> 
+
+- https://wiki.alpinelinux.org/wiki/MariaDB
+
+---
+**[上一頁 - 介紹 系統架構圖](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/Architecture.md)**
+
+**[下一頁 - 部署 images 到 k3s 叢集](https://github.com/xuan103/k3s-Enterprise-Application-System/blob/main/Documents/K3S_Cluster.md)**
