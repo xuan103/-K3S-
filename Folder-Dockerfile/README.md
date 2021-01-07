@@ -1,10 +1,17 @@
----
-tags: k3s-Enterprise-Application-System
+# Dockerfile
 
-ppt: https://docs.google.com/presentation/d/12C4x0h0EyveVT4NpMaVzkDDvPlRcoU3jXwT7IgFecr0/edit#slide=id.p
----
 
-# DOCKERFILER
+```
+FROM alpine:3.12.1
+RUN apk update && apk upgrade && apk add --no-cache mariadb-client nano sudo wget curl \
+	tree elinks bash shadow procps util-linux coreutils binutils findutils grep && \
+	wget https://busybox.net/downloads/binaries/1.28.1-defconfig-multiarch/busybox-x86_64 && \
+	chmod +x busybox-x86_64 && mv busybox-x86_64 bin/busybox1.28 && \
+	mkdir -p /opt/www/cgi-bin                                                                                    
+COPY kungfu /opt/www/cgi-bin/
+CMD ["/bin/bash","-c","busybox1.28 httpd -f -p 8888 -h /opt/www "]
+```
 
-TEST
-QFKAL;GKS POV
+- image 使用 alpine:3.12.1
+- 安裝基本套件
+- 將應用程式所需程式放進 image 裡
